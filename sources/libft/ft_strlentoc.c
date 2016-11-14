@@ -1,0 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlentoc.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lasalced <lasalced@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2014/11/11 11:30:03 by lasalced          #+#    #+#             */
+/*   Updated: 2016/03/28 13:04:05 by lasalced         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*
+** Description:
+** calcul la longueur de la chaine src jusqu'au caratere passe en parametre.
+** param.
+** #1 la chaine src.
+** #2 le caractere d'arret.
+** retour : la taille de src jusqu'au caractere c;
+*/
+
+size_t		ft_strlentoc(const char *src, char c)
+{
+	size_t	i;
+	size_t	len;
+
+	i = 0;
+	len = ft_strlen(src) + 1;
+	while (src[i] != c && i < len)
+		i++;
+	return (i);
+}
